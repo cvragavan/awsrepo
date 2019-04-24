@@ -1,0 +1,10 @@
+The quickest way to get started is to run the aws configure command:
+$ aws configure
+AWS Access Key ID: foo
+AWS Secret Access Key: bar
+Default region name [us-west-2]: us-west-2
+Default output format [None]: json
+
+Accessing Services With Global Endpoints
+Some services such as AWS Identity and Access Management (IAM) have a single, global endpoint rather than different endpoints for each region.
+$ aws iam list-users
