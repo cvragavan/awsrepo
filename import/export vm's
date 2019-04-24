@@ -1,0 +1,6 @@
+aws s3 cp C:\Study\AWS\Windows2008-disk1.vmdk s3://vmimportexport-bkt --region us-west-2 --profile vijay
+
+
+aws ec2 import-image --description "Windows 2008 image" --disk-containers file://containers.json  --region us-west-2 --profile vijay
+
+aws ec2 describe-import-image-tasks --import-task-ids import-ami-04c76cc67a8a52ea4 --region us-west-2 --profile vijay
