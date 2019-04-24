@@ -1,0 +1,9 @@
+[
+  {
+    "Description": "Windows 2008 image",
+    "Format": "vmdk",
+    "UserBucket": {
+        "S3Bucket": "vmimportexport-bkt",
+        "S3Key": "Windows2008-disk1.vmdk"
+    }
+}]
