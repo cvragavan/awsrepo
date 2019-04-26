@@ -1,0 +1,25 @@
+Testing a Connection to an Amazon RDS DB Instance:
+
+You can test your connection to a DB instance using common Linux or Windows tools.
+From a Linux or Unix terminal, you can test the connection by typing the following (replace <DB-instance-endpoint> 
+with the endpoint and <port> with the port of your DB instance):
+
+nc -zv <DB-instance-endpoint> <port> 
+
+For example, the following shows a sample command and the return value:
+
+nc -zv postgresql1.c6c8mn7tsdgv0.us-west-2.rds.amazonaws.com 8299
+
+  Connection to postgresql1.c6c8mn7tsdgv0.us-west-2.rds.amazonaws.com 8299 port [tcp/vvr-data] succeeded!
+
+Windows users can use Telnet to test the connection to a DB instance. Note that Telnet actions are not supported other than for testing the connection.
+If a connection is successful, the action returns no message. 
+If a connection is not successful, you receive an error message such as the following:
+
+C:\>telnet sg-postgresql1.c6c8mntzhgv0.us-west-2.rds.amazonaws.com 819
+
+  Connecting To sg-postgresql1.c6c8mntzhgv0.us-west-2.rds.amazonaws.com...Could not open
+  connection to the host, on port 819: Connect failed 
+
+Describe the DB instance:
+aws rds describe-db-instances --db-instance-identifier mydbinstance
