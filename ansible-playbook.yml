@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+    - name: deploy to webserver
+      copy:
+        src: /home/ansadmin/opt/playbooks
+        dest: /home/ansadmin
